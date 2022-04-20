@@ -1,22 +1,18 @@
 import Head from 'next/head'
+
+import { loadStripe } from '@stripe/stripe-js';
+
 import PageTitle from "../components/PageTitle/PageTitle";
 import ProductCard from "../components/ProductCard/ProductCard";
 import {pane} from "./../styles/home.module.scss"
 
-
-/* 
-          SSG Static Site Generation
-          content
-          data + comp ======> html+css-----------------> edge/CDN
-
-*/
- 
 export default function Home(props) {
 
     const products = props.products.slice(0,3);
+    
+
+    const stripePromise = loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY);
    
-
-
      return(
           <>
           <Head>
@@ -34,8 +30,6 @@ export default function Home(props) {
 }
 
 
- 
-
 export async function getStaticProps(){
   
     const res = await fetch('https://storefront-933b9-default-rtdb.firebaseio.com/products.json')
@@ -48,5 +42,3 @@ export async function getStaticProps(){
       revalidate: 60,
  }
 }
-
- 
