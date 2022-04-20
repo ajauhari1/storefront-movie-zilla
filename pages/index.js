@@ -3,7 +3,7 @@ import PageTitle from "../components/PageTitle/PageTitle";
 import ProductCard from "../components/ProductCard/ProductCard";
 import {pane} from "./../styles/home.module.scss"
 
-// https://shoeshine8k-default-rtdb.firebaseio.com/products.json
+
 /* 
           SSG Static Site Generation
           content
@@ -21,8 +21,8 @@ export default function Home(props) {
           <>
           <Head>
           <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-          <meta name="description" content="storefront online running shoes with free shipping"/>
-          <meta name="keywords" content="Shoes, Runing, Running Shoes, Nike Shoes, New Balance Shoes"/>
+          <meta name="description" content="storefront online movie store"/>
+          <meta name="keywords" content="Movies, Flims, Shows, Video, New Movies"/>
            <title>Storefront</title>
           </Head>
            <PageTitle tagline="Movies Specials" title="StoreFront-MovieZilla"/>
