@@ -25,7 +25,7 @@ export default function Home(props) {
           <meta name="keywords" content="Shoes, Runing, Running Shoes, Nike Shoes, New Balance Shoes"/>
            <title>Storefront</title>
           </Head>
-           <PageTitle tagline="product specials" title="Storefront"/>
+           <PageTitle tagline="Movies Specials" title="StoreFront-MovieZilla"/>
            <main className={pane}>
                {  products.map(product=> <ProductCard  key={product.uid} product={product}/>)}
            </main>
